@@ -1,0 +1,36 @@
+.unm-container {
+    position: fixed;
+    top: 40px;
+    left: 40px;
+    z-index: 1000;
+    user-select: none; /* Prevent selection */
+}
+
+.unm-icon {
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: lightgray;
+    font-size: 1.2em;
+    user-select: none; /* Prevent selection */
+}
+
+.unm-tree {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: white;
+    padding: 10px;
+    z-index: 1000;
+    user-select: none; /* Prevent selection */
+}
+
+.unm-tree ul {
+    list-style-type: none;
+    padding-left: 20px;
+    user-select: none; /* Prevent selection */
+}
