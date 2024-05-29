@@ -1,0 +1,89 @@
+body {
+    background-color: var(--background-color);
+}
+
+/*
+--text-color
+--background-color
+--secondary-background-color
+--primary-color
+--secondary-color
+--accent-color
+*/
+
+.browser-window {
+    color: var(--text-color);
+    border: 3px solid var(--primary-color);
+    border-radius: 8px;
+    width: 80%;
+    max-width: 1200px;
+    background-color: rgba(22, 22, 22, 0);
+    position: relative;
+    padding-top: 40px; /* Adjusted padding */
+    overflow: auto;
+}
+
+.tabs {
+    display: flex;
+    border-bottom: 1px solid black;
+    position: absolute;
+    top: 0;
+    right: 20px;
+    background-color: white;
+    z-index: 1;
+}
+
+.tab {
+    padding: 10px 20px;
+    border: 1px solid black;
+    border-bottom: none;
+    cursor: pointer;
+    margin-left: 5px; /* Adjusted margin for right alignment */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    background-color: #e0e0e0;
+}
+
+.tab-content {
+    padding: 20px;
+    display: none;
+}
+
+.tab-content:first-of-type {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .browser-window {
+        width: 95%;
+    }
+
+    .tabs {
+        flex-wrap: wrap;
+        top: 0; /* Adjusted for smaller screens */
+    }
+
+    .tab {
+        margin-bottom: 5px;
+        flex-grow: 1;
+        text-align: center;
+    }
+}
+
+/* Gradual box blur on scroll */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    filter: blur(0px);
+    z-index: -1;
+    transition: filter 0.5s ease;
+}
+
+body.scroll-blur::before {
+    filter: blur(10px);
+}

@@ -1,0 +1,29 @@
+/* colors.css */
+
+/* Default (Dark Mode) */
+:root {
+    --text-color: #fff; /* Default text color for dark mode */
+    --background-color: #0C010E; /* Default background color for dark mode */
+    --secondary-background-color: #3c1d3f; /* Default secondary background color for dark mode */
+    --primary-color: #dddddd; /* Default primary color for dark mode */
+    --secondary-color: #89143C; /* Default secondary color for dark mode */
+    --accent-color: #E171FD; /* Default accent color for dark mode */
+}
+
+/* Light Mode */
+.light-theme {
+    --text-color: #333; /* Default text color for light mode */
+    --background-color: #fff; /* Default background color for light mode */
+    --primary-color: #007bff; /* Default primary color for light mode */
+    --secondary-color: #6c757d; /* Default secondary color for light mode */
+    --accent-color: #ffc107; /* Default accent color for light mode */
+}
+
+/* Special Theme */
+.special-theme {
+    --text-color: #fff; /* Default text color for special theme */
+    --background-color: #333; /* Default background color for special theme */
+    --primary-color: #007bff; /* Default primary color for special theme */
+    --secondary-color: #6c757d; /* Default secondary color for special theme */
+    --accent-color: #ffc107; /* Default accent color for special theme */
+}

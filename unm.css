@@ -1,17 +1,26 @@
+/*
+--text-color
+--background-color
+--secondary-background-color
+--primary-color
+--secondary-color
+--accent-color
+*/
+
 .unm-container {
     position: fixed;
     top: 40px;
     left: 40px;
     z-index: 1000;
-    user-select: none; /* Prevent selection */
+    user-select: none;
 }
 
 .unm-icon {
     cursor: pointer;
     padding: 10px;
-    border: 1px solid black;
-    border-radius: 4px;
-    background-color: lightgray;
+    border: 3px solid var(--primary-color);
+    border-radius: 8px;
+    background-color: var(--secondary-background-color);
     font-size: 1.2em;
     user-select: none; /* Prevent selection */
 }
@@ -21,16 +30,55 @@
     position: absolute;
     top: 40px;
     left: 0;
-    border: 1px solid black;
-    border-radius: 4px;
-    background-color: white;
-    padding: 10px;
+    border: 3.5px solid var(--primary-color);
+    border-radius: 8px;
+    background-color: var(--background-color);
+    padding: 100px;
     z-index: 1000;
     user-select: none; /* Prevent selection */
 }
 
 .unm-tree ul {
+    color: var(--text-color);
     list-style-type: none;
     padding-left: 20px;
     user-select: none; /* Prevent selection */
+}
+
+/* For dark theme */
+.dark-theme .unm-icon {
+    background-color: var(--secondary-background-color);
+    border-color: var(--primary-color);
+}
+
+.dark-theme .unm-tree {
+    border-color: var(--primary-color);
+    background-color: var(--secondary-background-color);
+    color: var(--text-color);
+}
+
+/* For light theme */
+.light-theme .unm-icon {
+    background-color: #f0f0f0;
+    color: #333;
+    border-color: #ccc;
+}
+
+.light-theme .unm-tree {
+    border-color: #ccc;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* For special theme */
+.special-theme .unm-icon {
+    background-color: #ff1493; /* pink */
+    color: #fff;
+    border-color: #ff69b4; /* lighter pink */
+}
+
+.special-theme .unm-tree {
+    border-color: #ff69b4; /* lighter pink */
+    background-color: #ff1493; /* pink */
+    color: #fff;
 }
