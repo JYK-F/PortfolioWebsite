@@ -1,3 +1,9 @@
+/* Main Content Container */
+.main-content {
+    padding-top: 90%; /* Adjust this value as needed */
+}
+
+/* Body Styles */
 body {
     margin: 0;
     padding: 0;
@@ -8,6 +14,7 @@ body {
     background-color: #000;
 }
 
+/* Background Video Styles */
 .background-video {
     position: fixed;
     top: 0;
@@ -25,27 +32,41 @@ body {
     object-fit: cover;
 }
 
+/* Gradient Overlay Styles */
 .gradient-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 55%;
-    background-image: linear-gradient( to top, transparent, var(--background-color) 0%, rgba(0,0,0,0) 32%);
+    background-image: linear-gradient(to top, transparent, var(--background-color) 0%, rgba(0, 0, 0, 0) 32%);
     z-index: 0;
 }
 
+/* Content Styles */
 .content {
     text-align: center;
     color: white;
+    padding-top: 10px;
 }
 
+/* Project Title Styles */
 .project-title {
-    margin: 650px 0px 80px;
+    margin: 700px 0 80px;
     font-size: 3em;
     user-select: none;
+    background-color: #00000069;
 }
 
+.sticky-title {
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0;
+    padding: 50px;
+    z-index: 99;
+}
+
+/* Icon Grid Styles */
 .icon-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -55,6 +76,7 @@ body {
     width: 90%;
 }
 
+/* Icon Box Styles */
 .icon-box {
     background-color: var(--secondary-background-color);
     font-size: 17px;
@@ -71,10 +93,11 @@ body {
 }
 
 .icon-box p {
-    margin-top: 0px;
+    margin-top: 0;
     font-size: 1em;
 }
 
+/* Media Queries for Icon Box */
 @media (max-width: 1000px) {
     .icon-box {
         width: 120px;
