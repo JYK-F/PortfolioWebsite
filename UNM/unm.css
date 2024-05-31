@@ -11,20 +11,20 @@
 /* Default (Dark Theme) Styles */
 .unm-container {
     position: fixed;
-    top: 40px;
-    left: 40px;
-    z-index: 1000;
+    top: 50px;
+    left: 50px;
+    z-index: 100;
     user-select: none;
 }
 
 .unm-icon {
     cursor: pointer;
-    padding: 10px;
+    padding: 15px;
     border: 3px solid var(--primary-color);
     border-radius: 8px;
     background-color: var(--secondary-background-color);
     font-size: 1.2em;
-    user-select: none; /* Prevent selection */
+    user-select: none;
 }
 
 .unm-tree {
@@ -37,20 +37,20 @@
     background-color: var(--background-color);
     padding: 10px;
     z-index: 1000;
-    user-select: none; /* Prevent selection */
+    user-select: none;
 }
 
 .unm-tree ul {
     color: var(--text-color);
     list-style-type: none;
     padding-left: 20px;
-    user-select: none; /* Prevent selection */
+    user-select: none;
 }
 
 /* For dark theme */
 .dark-theme .unm-icon {
     background-color: var(--secondary-background-color);
-    border-color: var(--border-color);
+    border-color: rgb(51, 51, 51);
 }
 
 .dark-theme .unm-tree {
@@ -74,13 +74,13 @@
 
 /* For special theme */
 .special-theme .unm-icon {
-    background-color: #ff1493; /* pink */
+    background-color: #ff1493; 
     color: #fff;
-    border-color: var(--border-color); /* use a lighter pink if available */
+    border-color: var(--border-color); 
 }
 
 .special-theme .unm-tree {
-    border-color: var(--border-color); /* use a lighter pink if available */
-    background-color: #ff1493; /* pink */
+    border-color: var(--border-color);
+    background-color: #ff1493; 
     color: #fff;
 }

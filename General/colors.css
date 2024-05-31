@@ -2,13 +2,13 @@
 
 /* Default (Dark Mode) */
 :root {
-    --text-color: #fff; /* Default text color for dark mode */
+    --text-color: #F4F4F7; /* Default text color for dark mode */
     --background-color: #0C010E; /* Default background color for dark mode */
-    --secondary-background-color: #3c1d3f; /* Default secondary background color for dark mode */
+    --secondary-background-color: #141515; /* Default secondary background color for dark mode */
     --primary-color: #dddddd; /* Default primary color for dark mode */
     --secondary-color: #89143C; /* Default secondary color for dark mode */
     --accent-color: #E171FD; /* Default accent color for dark mode */
-    --border-color: #c0c0c0;
+    --border-color: #F4F4F7;
 }
 
 /* Light Mode */
