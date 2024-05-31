@@ -8,6 +8,7 @@
     --primary-color: #dddddd; /* Default primary color for dark mode */
     --secondary-color: #89143C; /* Default secondary color for dark mode */
     --accent-color: #E171FD; /* Default accent color for dark mode */
+    --border-color: #c0c0c0;
 }
 
 /* Light Mode */
@@ -17,6 +18,7 @@
     --primary-color: #007bff; /* Default primary color for light mode */
     --secondary-color: #6c757d; /* Default secondary color for light mode */
     --accent-color: #ffc107; /* Default accent color for light mode */
+    --border-color: #c0c0c0;
 }
 
 /* Special Theme */
@@ -26,4 +28,5 @@
     --primary-color: #007bff; /* Default primary color for special theme */
     --secondary-color: #6c757d; /* Default secondary color for special theme */
     --accent-color: #ffc107; /* Default accent color for special theme */
+    --border-color: #ff20b1;
 }

@@ -5,8 +5,10 @@
 --primary-color
 --secondary-color
 --accent-color
+--border-color
 */
 
+/* Default (Dark Theme) Styles */
 .unm-container {
     position: fixed;
     top: 40px;
@@ -30,10 +32,10 @@
     position: absolute;
     top: 40px;
     left: 0;
-    border: 3.5px solid var(--primary-color);
+    border: 3.5px solid var(--border-color);
     border-radius: 8px;
     background-color: var(--background-color);
-    padding: 100px;
+    padding: 10px;
     z-index: 1000;
     user-select: none; /* Prevent selection */
 }
@@ -48,11 +50,11 @@
 /* For dark theme */
 .dark-theme .unm-icon {
     background-color: var(--secondary-background-color);
-    border-color: var(--primary-color);
+    border-color: var(--border-color);
 }
 
 .dark-theme .unm-tree {
-    border-color: var(--primary-color);
+    border-color: var(--border-color);
     background-color: var(--secondary-background-color);
     color: var(--text-color);
 }
@@ -61,11 +63,11 @@
 .light-theme .unm-icon {
     background-color: #f0f0f0;
     color: #333;
-    border-color: #ccc;
+    border-color: var(--border-color);
 }
 
 .light-theme .unm-tree {
-    border-color: #ccc;
+    border-color: var(--border-color);
     background-color: #f0f0f0;
     color: #333;
 }
@@ -74,11 +76,11 @@
 .special-theme .unm-icon {
     background-color: #ff1493; /* pink */
     color: #fff;
-    border-color: #ff69b4; /* lighter pink */
+    border-color: var(--border-color); /* use a lighter pink if available */
 }
 
 .special-theme .unm-tree {
-    border-color: #ff69b4; /* lighter pink */
+    border-color: var(--border-color); /* use a lighter pink if available */
     background-color: #ff1493; /* pink */
     color: #fff;
 }

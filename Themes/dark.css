@@ -1,8 +1,10 @@
 body {
     background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 /*
+--border-color
 --text-color
 --background-color
 --secondary-background-color
@@ -13,11 +15,11 @@ body {
 
 .browser-window {
     color: var(--text-color);
-    border: 3px solid var(--primary-color);
+    border: 3px solid var(--border-color);
     border-radius: 8px;
     width: 80%;
     max-width: 1200px;
-    background-color: rgba(22, 22, 22, 0);
+    background-color: rgba(43, 43, 43, 0);
     position: relative;
     padding-top: 40px; /* Adjusted padding */
     overflow: auto;
@@ -25,23 +27,24 @@ body {
 
 .tabs {
     display: flex;
-    border-bottom: 1px solid black;
+    border-bottom: 3px solid var(--border-color);
     position: absolute;
     top: 0;
     right: 20px;
-    background-color: white;
+    background-color: #ffffff00;
     z-index: 1;
 }
 
 .tab {
+    color: var(--text-color);
     padding: 10px 20px;
-    border: 1px solid black;
+    border: 3px solid var(--border-color);
     border-bottom: none;
     cursor: pointer;
     margin-left: 5px; /* Adjusted margin for right alignment */
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
-    background-color: #e0e0e0;
+    background-color: var(--secondary-background-color);
 }
 
 .tab-content {

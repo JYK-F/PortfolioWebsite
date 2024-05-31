@@ -4,33 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Website!!</title>
-    <link rel="stylesheet" href="colors.css"> 
-    <link rel="stylesheet" href="unm.css">
-    <link rel="stylesheet" href="default.css">
-    <link rel="stylesheet" href="dark.css" id="theme"> <!-- Default to dark mode -->
+    <link rel="stylesheet" href="/General/colors.css"> 
+    <link rel="stylesheet" href="/UNM/unm.css">
+    <link rel="stylesheet" href="/General/default.css">
+    <link rel="stylesheet" href="/Themes/dark.css" id="theme"> <!-- Default to dark mode -->
 </head>
 <body>
-    <div class="unm-container">
-        <div class="unm-icon">🌐</div>
-        <div class="unm-tree">
-            <ul>
-                <li>Home</li>
-                <li>Company</li>
-                <li>Portfolio</li>
-            </ul>
-        </div>
-    </div>
+    <div id="unm"></div>
     <div class="theme-buttons">
-        <button class="theme-button" onclick="setTheme('light')" title="Light Mode">
-            <span class="theme-icon">🌞</span>
+        <button class="theme-button" data-theme="light" title="Light Mode">
+            <img src="/path/to/light-icon.png" alt="Light Mode">
         </button>
-        <button class="theme-button" onclick="setTheme('dark')" title="Dark Mode">
-            <span class="theme-icon">🌙</span>
+        <button class="theme-button" data-theme="dark" title="Dark Mode">
+            <img src="/path/to/dark-icon.png" alt="Dark Mode">
         </button>
-        <button class="theme-button" onclick="setTheme('special')" title="Special Theme">
-            <span class="theme-icon">🎨</span>
+        <button class="theme-button" data-theme="special" title="Special Theme">
+            <img src="/path/to/special-icon.png" alt="Special Theme">
         </button>
-    </div>    
+    </div>
+      
     <div class="tabs">
         <div class="tab" onclick="showTab(event, 'home')">Home ♥</div>
         <div class="tab" onclick="showTab(event, 'company')">Company</div>
@@ -50,7 +42,8 @@
             <p>Portfolio Projects</p>
         </div>
     </div>
-    <script src="unm.js"></script>
-    <script src="script.js"></script>
+    <script src="/UNM/unm.js"></script>
+    <script src="/Themes/themes.js"></script>
+    <script src="/General/script.js"></script>
 </body>
 </html>
