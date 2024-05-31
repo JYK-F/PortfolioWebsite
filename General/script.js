@@ -29,13 +29,3 @@ function showTab(event, tabId) {
     event.currentTarget.classList.add('active');
 }
 
-function setTheme(themeName) {
-    // Remove any existing theme classes
-    document.documentElement.classList.remove('light-theme', 'special-theme');
-
-    // Apply the selected theme class
-    document.documentElement.classList.add(themeName + '-theme');
-
-    // Update the theme-specific CSS file
-    document.getElementById('theme').setAttribute('href', themeName + '.css');
-}

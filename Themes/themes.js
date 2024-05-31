@@ -1,18 +1,27 @@
-// /Themes/themes.js
 document.addEventListener("DOMContentLoaded", function() {
-    // Function to set the theme
-    function setTheme(theme) {
-        document.body.className = theme + '-theme';
-        // Store theme in local storage to persist across sessions
-        localStorage.setItem('theme', theme);
-    }
-
-    // Apply stored theme on page load
-    const savedTheme = localStorage.getItem('theme') || 'dark'; // Default to dark theme
+    // Set the initial theme based on local storage or default to light theme
+    const savedTheme = localStorage.getItem('theme') || 'light';
     setTheme(savedTheme);
 
-    // Theme button event listeners
+    // Add event listeners for theme buttons
     document.querySelectorAll('.theme-button').forEach(button => {
-        button.addEventListener('click', () => setTheme(button.dataset.theme));
+        button.addEventListener('click', () => {
+            const theme = button.getAttribute('data-theme');
+            setTheme(theme);
+        });
     });
 });
+
+function setTheme(themeName) {
+    // Remove any existing theme classes
+    document.documentElement.classList.remove('light-theme', 'dark-theme', 'special-theme');
+
+    // Apply the selected theme class
+    document.documentElement.classList.add(themeName + '-theme');
+
+    // Update the theme-specific CSS file
+    document.getElementById('theme').setAttribute('href', '/Themes/' + themeName + '.css');
+
+    // Save the selected theme to local storage
+    localStorage.setItem('theme', themeName);
+}
