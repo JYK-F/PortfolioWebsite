@@ -7,6 +7,15 @@
     <link rel="stylesheet" href="General/default.css">
     <link rel="stylesheet" href="storygame.css">
     <link rel="stylesheet" href="/UNM/unm.css">
+    <script>
+        // Inline script to apply the theme as early as possible
+        (function() {
+            const theme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.className = `${theme}-theme`;
+            const themeStylesheet = document.getElementById('theme-stylesheet');
+            themeStylesheet.href = `Themes/${theme}.css`;
+        })();
+    </script>
 </head>
 <body>
     <div id="unm"></div>

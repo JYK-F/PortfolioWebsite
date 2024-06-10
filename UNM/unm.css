@@ -1,12 +1,4 @@
-/*
---text-color
---background-color
---secondary-background-color
---primary-color
---secondary-color
---accent-color
---border-color
-*/
+/* CSS for UNM using variables from colors.css */
 
 /* Default (Dark Theme) Styles */
 .unm-container {
@@ -20,9 +12,9 @@
 .unm-icon {
     cursor: pointer;
     padding: 15px;
-    border: 3px solid var(--primary-color);
+    border: 3px solid var(--dark-primary-color);
     border-radius: 8px;
-    background-color: var(--secondary-background-color);
+    background-color: var(--dark-secondary-background-color);
     font-size: 1.2em;
     user-select: none;
 }
@@ -32,16 +24,16 @@
     position: absolute;
     top: 40px;
     left: 0;
-    border: 3.5px solid var(--border-color);
+    border: 3.5px solid var(--dark-border-color);
     border-radius: 8px;
-    background-color: var(--background-color);
+    background-color: var(--dark-background-color);
     padding: 10px;
     z-index: 1000;
     user-select: none;
 }
 
 .unm-tree ul {
-    color: var(--text-color);
+    color: var(--dark-text-color);
     list-style-type: none;
     padding-left: 20px;
     user-select: none;
@@ -49,38 +41,38 @@
 
 /* For dark theme */
 .dark-theme .unm-icon {
-    background-color: var(--secondary-background-color);
-    border-color: rgb(51, 51, 51);
+    background-color: var(--dark-secondary-background-color);
+    border-color: var(--dark-border-color);
 }
 
 .dark-theme .unm-tree {
-    border-color: var(--border-color);
-    background-color: var(--secondary-background-color);
-    color: var(--text-color);
+    border-color: var(--dark-border-color);
+    background-color: var(--dark-secondary-background-color);
+    color: var(--dark-text-color);
 }
 
 /* For light theme */
 .light-theme .unm-icon {
-    background-color: #f0f0f0;
-    color: #333;
+    background-color: var(--secondary-background-color);
+    color: var(--text-color);
     border-color: var(--border-color);
 }
 
 .light-theme .unm-tree {
     border-color: var(--border-color);
-    background-color: #f0f0f0;
-    color: #333;
+    background-color: var(--secondary-background-color);
+    color: var(--text-color);
 }
 
 /* For special theme */
-.special-theme .unm-icon {
-    background-color: #ff1493; 
-    color: #fff;
-    border-color: var(--border-color); 
+.custom-theme .unm-icon {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    border-color: var(--border-color);
 }
 
-.special-theme .unm-tree {
+.custom-theme .unm-tree {
     border-color: var(--border-color);
-    background-color: #ff1493; 
-    color: #fff;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }

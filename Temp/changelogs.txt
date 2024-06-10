@@ -1,0 +1,15 @@
+Things 2 check
+
+why the project page is not chnageing themes anymore
+
+
+Future plans
+change the theme buttons to be icons and stick to the top right of unm
+fix StoryGame page
+
+
+I changed
+the name from chnage&plans to changelogs
+the unm now chnages with theme
+theme is now being loaded earlier (i hope)
+i delted the call to the unm.css in the html pages

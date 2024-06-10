@@ -4,9 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Website!!</title>
-    <link rel="stylesheet" href="UNM/unm.css">
+
     <link rel="stylesheet" href="General/default.css">
     <link id="theme-stylesheet" rel="stylesheet" href="/Themes/dark.css">
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme') || 'dark';
+            document.documentElement.className = `${theme}-theme`;
+            const themeStylesheet = document.getElementById('theme-stylesheet');
+            themeStylesheet.href = `Themes/${theme}.css`;
+        })();
+    </script>
 </head>
 <body>
     <div id="unm"></div>
