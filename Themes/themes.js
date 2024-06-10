@@ -1,18 +1,15 @@
-document.addEventListener("DOMContentLoaded", function() {
-  setupUNMContent();
+document.addEventListener("DOMContentLoaded", async function() {
+  try {
+      const response = await fetch('/unm.html');
+      const data = await response.text();
+      document.getElementById('unm').innerHTML = data;
+      console.log('UNM HTML loaded and added to the document');
+      addUNMEventListeners();
+      setupThemeSwitcher();
+  } catch (error) {
+      console.error('Error loading unm.html:', error);
+  }
 });
-
-function setupUNMContent() {
-  fetch('/unm.html')
-      .then(response => response.text())
-      .then(data => {
-          document.getElementById('unm').innerHTML = data;
-          console.log('UNM HTML loaded and added to the document');
-          addUNMEventListeners();
-          setupThemeSwitcher(); // Move setupThemeSwitcher inside the then block
-      })
-      .catch(error => console.error('Error loading unm.html:', error));
-}
 
 function addUNMEventListeners() {
   document.querySelector('.unm-icon').addEventListener('click', toggleUNMTree);
@@ -30,44 +27,41 @@ function toggleUNMTree() {
 }
 
 function setupThemeSwitcher() {
-  let currentTheme = 'dark';
-  let isCustomTheme = false;
+  const themeElements = {
+      toggleButton: document.getElementById('toggle-theme'),
+      switchButton: document.getElementById('switch-theme')
+  };
 
-  const toggleThemeButton = document.getElementById('toggle-theme');
-  const switchThemeButton = document.getElementById('switch-theme');
-
-  if (!toggleThemeButton || !switchThemeButton) {
+  if (!themeElements.toggleButton || !themeElements.switchButton) {
       console.error('Toggle theme or switch theme button not found.');
       return;
   }
 
-  toggleThemeButton.addEventListener('click', toggleTheme);
-  switchThemeButton.addEventListener('click', switchTheme);
+  let currentTheme = localStorage.getItem('theme') || 'dark'; // Retrieve the stored theme
+  let isCustomTheme = false;
+
+  updateTheme(currentTheme); // Set the initial theme
+
+  themeElements.toggleButton.addEventListener('click', toggleTheme);
+  themeElements.switchButton.addEventListener('click', switchTheme);
 
   function toggleTheme() {
       console.log('Toggle theme button clicked');
-      if (isCustomTheme) {
-          isCustomTheme = false;
-          console.log('Custom theme reset');
-      }
+      isCustomTheme = isCustomTheme ? false : isCustomTheme;
       currentTheme = (currentTheme === 'dark') ? 'light' : 'dark';
       updateTheme(currentTheme);
   }
 
   function switchTheme() {
       console.log('Switch theme button clicked');
-      if (isCustomTheme) {
-          updateTheme(currentTheme);
-          console.log(`Switched back to ${currentTheme} theme`);
-      } else {
-          updateTheme('Y2K');
-          console.log('Switched to custom Y2K theme');
-      }
+      updateTheme(isCustomTheme ? currentTheme : 'Y2K');
+      console.log(isCustomTheme ? `Switched back to ${currentTheme} theme` : 'Switched to custom Y2K theme');
       isCustomTheme = !isCustomTheme;
   }
 
   function updateTheme(theme) {
       document.getElementById('theme-stylesheet').href = `/Themes/${theme}.css`;
       console.log(`Theme switched to ${theme}`);
+      localStorage.setItem('theme', theme); // Store the selected theme
   }
 }

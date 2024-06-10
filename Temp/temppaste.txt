@@ -1,3 +1,0 @@
-okay so i need to check a few things
-
-why the theme is not switching in th unm if i can delte the iunm.css call in the html page 

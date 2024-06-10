@@ -7,7 +7,6 @@
 
 /* Body styles */
 body {
-    font-family: Arial, sans-serif;
     background-color: var(--background-color); /* White background */
     color: var(--text-color); /* Black text */
 }
