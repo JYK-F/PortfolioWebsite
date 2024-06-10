@@ -1,5 +1,6 @@
+// Main UNM function: Load content and set up event listeners
 document.addEventListener("DOMContentLoaded", function() {
-    fetch('/UNM/unm.html')
+    fetch('/unm.html')
         .then(response => response.text())
         .then(data => {
             document.getElementById('unm').innerHTML = data;
@@ -8,14 +9,6 @@ document.addEventListener("DOMContentLoaded", function() {
             document.querySelector('.unm-icon').addEventListener('click', () => {
                 const unmTree = document.querySelector('.unm-tree');
                 unmTree.style.display = unmTree.style.display === 'block' ? 'none' : 'block';
-            });
-
-            // Add event listeners for theme buttons
-            document.querySelectorAll('.theme-button').forEach(button => {
-                button.addEventListener('click', () => {
-                    const theme = button.getAttribute('data-theme');
-                    setTheme(theme);
-                });
             });
 
             // Add event listeners for language buttons
@@ -29,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
         .catch(error => console.error('Error loading unm.html:', error));
 });
 
+// Translation function: Manage language translation
 function setLanguage(language) {
     fetch(`/Translation/language-${language}.json`)
         .then(response => response.json())

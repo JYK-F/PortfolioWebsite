@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Theme Switcher</title>
+<style>
+  /* Define styles for dark mode */
+  body.dark-mode {
+    background-color: #333;
+    color: #fff;
+  }
+
+  /* Define styles for light mode */
+  body.light-mode {
+    background-color: #fff;
+    color: #000;
+  }
+
+  /* Define styles for the custom theme */
+  body.custom-theme {
+    background-color: lightblue;
+    color: darkblue;
+  }
+</style>
+</head>
+<body class="dark-mode">
+  <h1>Theme Switcher</h1>
+  <button id="toggle-theme">Toggle Dark/Light Mode</button>
+  <button id="switch-theme">Switch Theme</button>
+  
+<script>
+  const toggleThemeButton = document.getElementById('toggle-theme');
+  const switchThemeButton = document.getElementById('switch-theme');
+  let currentTheme = 'dark-mode'; // Default theme
+  let isCustomTheme = false;
+
+  // Function to toggle between light and dark mode
+  toggleThemeButton.addEventListener('click', function() {
+    if (isCustomTheme) {
+      // Reset custom theme
+      document.body.classList.remove('custom-theme');
+      isCustomTheme = false;
+    }
+    if (currentTheme === 'dark-mode') {
+      document.body.classList.remove('dark-mode');
+      document.body.classList.add('light-mode');
+      currentTheme = 'light-mode';
+    } else {
+      document.body.classList.remove('light-mode');
+      document.body.classList.add('dark-mode');
+      currentTheme = 'dark-mode';
+    }
+  });
+
+  // Function to switch to a separate theme
+  switchThemeButton.addEventListener('click', function() {
+    if (isCustomTheme) {
+      // Switch back to the previous theme
+      document.body.classList.remove('custom-theme');
+      document.body.classList.add(currentTheme);
+    } else {
+      // Store the current theme and switch to the custom theme
+      if (document.body.classList.contains('dark-mode')) {
+        currentTheme = 'dark-mode';
+      } else if (document.body.classList.contains('light-mode')) {
+        currentTheme = 'light-mode';
+      }
+      document.body.classList.remove('dark-mode');
+      document.body.classList.remove('light-mode');
+      document.body.classList.add('custom-theme');
+    }
+    isCustomTheme = !isCustomTheme;
+  });
+</script>
+</body>
+</html>

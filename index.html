@@ -4,18 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Website!!</title>
-    <link rel="stylesheet" href="General/colors.css"> 
     <link rel="stylesheet" href="UNM/unm.css">
     <link rel="stylesheet" href="General/default.css">
-    <link rel="stylesheet" href="Themes/dark.css" id="theme"> <!-- Default to dark mode -->
+    <link id="theme-stylesheet" rel="stylesheet" href="/Themes/dark.css">
 </head>
 <body>
-    <div id="UNM/unm"></div>
+    <div id="unm"></div>
     
     <div class="tabs">
         <div class="tab" onclick="showTab(event, 'home')">Home ♥</div>
         <div class="tab" onclick="showTab(event, 'company')">Company</div>
-        <div class="tab" onclick="showTab(event, 'portfolio')">Portfolio</div>
+        <div class="tab" onclick="showTab(event, 'aboutme')">About Me</div>
     </div>
     <div class="browser-window">
         <div id="home" class="tab-content">
@@ -26,13 +25,15 @@
             <h2>Company</h2>
             <p>Company Information</p>
         </div>
-        <div id="portfolio" class="tab-content">
-            <h2>Portfolio</h2>
-            <p>Portfolio Projects</p>
+        <div id="aboutme" class="tab-content">
+            <h2>About Me</h2>
+            <p>About Me so here ill put the lanages i speak and som info about me lol</p>
         </div>
     </div>
-    <script src="UNM/unm.js"></script>
-    <script src="Themes/themes.js"></script>
+
+
+    <script src="../unm.js"></script>
+    <script src="/Themes/themes.js"></script>
     <script src="General/script.js"></script>
 </body>
 </html>
