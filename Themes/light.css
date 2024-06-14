@@ -7,13 +7,13 @@
 
 /* Body styles */
 body {
-    background-color: var(--background-color); /* White background */
-    color: var(--text-color); /* Black text */
+    background-color: var(--light-background-color); /* White background */
+    color: var(--light-text-color); /* Black text */
 }
 
 /* Header styles */
 header {
-    background-color: var(--secondary-background-color); /* Light gray */
+    background-color: var(--light-secondary-background-color); /* Light gray */
     padding: 20px;
 }
 
@@ -35,7 +35,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: var(--text-color); /* Black */
+    color: var(--light-text-color); /* Black */
     font-weight: bold;
 }
 
@@ -46,7 +46,7 @@ nav ul li a {
 
 /* Footer styles */
 footer {
-    background-color: var(--secondary-background-color); /* Light gray */
+    background-color: var(--light-secondary-background-color); /* Light gray */
     padding: 20px;
     text-align: center;
 }

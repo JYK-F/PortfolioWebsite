@@ -11,23 +11,23 @@
     --dark-border-color: #F4F4F7;
 }
 
-/* Light Mode */
+/* Light Theme */
 :root {
-    --text-color: #252525; /* Default text color for light mode */
-    --background-color: #fff; /* Default background color for light mode */
-    --secondary-background-color: #f0f0f0; /* Default secondary background color for light mode */
-    --primary-color: #007bff; /* Default primary color for light mode */
-    --secondary-color: #6c757d; /* Default secondary color for light mode */
-    --accent-color: #ffc107; /* Default accent color for light mode */
-    --border-color: #c0c0c0;
+    --light-text-color: #252525; /* Default text color for light mode */
+    --light-background-color: #fff; /* Default background color for light mode */
+    --light-secondary-background-color: #f0f0f0; /* Default secondary background color for light mode */
+    --light-primary-color: #007bff; /* Default primary color for light mode */
+    --light-secondary-color: #6c757d; /* Default secondary color for light mode */
+    --light-accent-color: #ffc107; /* Default accent color for light mode */
+    --light-border-color: #c0c0c0;
 }
 
-/* Special Theme */
-.custom-theme {
-    --text-color: #fff; /* Default text color for special theme */
-    --background-color: #333; /* Default background color for special theme */
-    --primary-color: #007bff; /* Default primary color for special theme */
-    --secondary-color: #6c757d; /* Default secondary color for special theme */
-    --accent-color: #ffc107; /* Default accent color for special theme */
-    --border-color: #ff20b1;
+/* Y2K Theme */
+:root {
+    --Y2K-text-color: #df1cd5; /* Default text color for special theme */
+    --Y2K-background-color: #b3f0ff; /* Default background color for special theme */
+    --Y2K-primary-color: #007bff; /* Default primary color for special theme */
+    --Y2K-secondary-color: #6c757d; /* Default secondary color for special theme */
+    --Y2K-accent-color: #ffc107; /* Default accent color for special theme */
+    --Y2K-border-color: #ff20b1;
 }

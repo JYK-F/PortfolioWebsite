@@ -53,26 +53,41 @@
 
 /* For light theme */
 .light-theme .unm-icon {
-    background-color: var(--secondary-background-color);
-    color: var(--text-color);
-    border-color: var(--border-color);
+    background-color: var(--light-secondary-background-color);
+    color: var(--light-text-color);
+    border-color: var(--light-border-color);
 }
 
 .light-theme .unm-tree {
-    border-color: var(--border-color);
-    background-color: var(--secondary-background-color);
-    color: var(--text-color);
+    border-color: var(--light-border-color);
+    background-color: var(--light-secondary-background-color);
+    color: var(--light-text-color);
 }
 
 /* For special theme */
-.custom-theme .unm-icon {
-    background-color: var(--background-color);
-    color: var(--text-color);
-    border-color: var(--border-color);
+.Y2K-theme .unm-icon {
+    background-color: var(--Y2K-background-color);
+    color: var(--Y2K-text-color);
+    border-color: var(--Y2K-border-color);
 }
 
-.custom-theme .unm-tree {
-    border-color: var(--border-color);
-    background-color: var(--background-color);
-    color: var(--text-color);
+.Y2K-theme .unm-tree {
+    border-color: var(--Y2K-border-color);
+    background-color: var(--Y2K-background-color);
+    color: var(--Y2K-text-color);
+}
+
+.header-icons {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    gap: 20px;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
 }

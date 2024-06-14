@@ -1,6 +1,7 @@
 Things 2 check
 
-why the project page is not chnageing themes anymore
+why the theme variables are named wierd fix this as soon as possable <<what>> ???
+theme buttons are not coresponding corectly to clicks with the battery
 
 
 Future plans
@@ -9,7 +10,7 @@ fix StoryGame page
 
 
 I changed
-the name from chnage&plans to changelogs
-the unm now chnages with theme
-theme is now being loaded earlier (i hope)
-i delted the call to the unm.css in the html pages
+added base to define the start folder /<base href="/PortfolioWebsite/">/
+fixed the projects page to switch theme
+all the themes are now corctly stated in the css and colors.css file
+ive chnaged the name form custom theme to be Y2K updated this across evrything
