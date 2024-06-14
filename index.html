@@ -6,13 +6,13 @@
     <title>Portfolio Website!!</title>
     <base href="/PortfolioWebsite/">
     <link rel="stylesheet" href="General/default.css">
-    <link id="theme-stylesheet" rel="stylesheet" href="/Themes/dark.css">
+    <link id="theme-stylesheet" rel="stylesheet" href="/PortfolioWebsite/Themes/dark.css">
     <script>
         (function() {
             const theme = localStorage.getItem('theme') || 'dark';
             document.documentElement.className = `${theme}-theme`;
             const themeStylesheet = document.getElementById('theme-stylesheet');
-            themeStylesheet.href = `Themes/${theme}.css`;
+            themeStylesheet.href = `/PortfolioWebsite/Themes/${theme}.css`;
         })();
     </script>
 </head>
@@ -30,8 +30,8 @@
             <p>Welcome to the Home tab!</p>
             <ul>
                 <li><a href="/PortfolioWebsite/">Home</a></li>
-                <li><a href="/Projects/projecten.html">Projects</a></li>
-                <li><a href="/Projects/Project0/storygame.html">StoryGame</a></li>
+                <li><a href="/PortfolioWebsite/Projects/projecten.html">Projects</a></li>
+                <li><a href="/PortfolioWebsite/Projects/Project0/storygame.html">StoryGame</a></li>
             </ul>
         </div>
         <div id="extra" class="tab-content">
