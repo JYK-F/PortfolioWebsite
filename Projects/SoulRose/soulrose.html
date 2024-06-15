@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projecten</title>
-    <link rel="stylesheet" href="/General/default.css">
-    <link id="theme-stylesheet" rel="stylesheet" href="/Themes/dark.css">
+    <link rel="stylesheet" href="./General/default.css">
+    <link id="theme-stylesheet" rel="stylesheet" href="./Themes/dark.css">
     <script>
         (function() {
             const theme = localStorage.getItem('theme') || 'dark';
             document.documentElement.className = `${theme}-theme`;
             const themeStylesheet = document.getElementById('theme-stylesheet');
-            themeStylesheet.href = `/Themes/${theme}.css`;
+            themeStylesheet.href = `./Themes/${theme}.css`;
         })();
     </script>
 </head>
@@ -20,7 +20,7 @@
     okay so this is the mian page of the soulrose project check the making of here
     <a href="./MO-SoulRose/">Making of SoulRose</a>
     
-    <script src="/unm.js"></script>
-    <script src="/Themes/themes.js"></script>
+    <script src="./unm.js"></script>
+    <script src="./Themes/themes.js"></script>
 </body>
 </html>
