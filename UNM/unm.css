@@ -19,20 +19,48 @@
     user-select: none;
 }
 
-.unm-tree {
+.unm-view {
     display: none;
     position: absolute;
-    top: 40px;
-    left: 0;
+    top: 200px; /*change this whenthe close button works*/
     border: 3.5px solid var(--dark-border-color);
     border-radius: 8px;
     background-color: var(--dark-background-color);
-    padding: 10px;
-    z-index: 1000;
+    padding: 10px 15px;
+    z-index: 10;
     user-select: none;
 }
 
-.unm-tree ul {
+.unm-fixed {
+    display: grid; 
+    grid-template-columns: 1.5fr 1.5fr 1.5fr 1.5fr 1.5fr; 
+    grid-template-rows: 1fr; 
+    width: 100%;
+    font-size: 1.2em;
+    user-select: none;
+    align-items: center;
+}
+
+.empty-space {
+    width: 150px;    
+}
+
+.gunm-icon {
+    padding: 10px;
+    width: 1em;
+    height:  fit-content;
+    cursor: pointer;
+}
+
+#switch-theme {
+    width: 1.3em;
+}
+#battery-icon {
+    cursor: auto;
+    width: 1.3em;
+}
+
+.unm-view ul {
     color: var(--dark-text-color);
     list-style-type: none;
     padding-left: 20px;
@@ -45,7 +73,7 @@
     border-color: var(--dark-border-color);
 }
 
-.dark-theme .unm-tree {
+.dark-theme .unm-view {
     border-color: var(--dark-border-color);
     background-color: var(--dark-secondary-background-color);
     color: var(--dark-text-color);
@@ -58,7 +86,7 @@
     border-color: var(--light-border-color);
 }
 
-.light-theme .unm-tree {
+.light-theme .unm-view {
     border-color: var(--light-border-color);
     background-color: var(--light-secondary-background-color);
     color: var(--light-text-color);
@@ -71,23 +99,8 @@
     border-color: var(--Y2K-border-color);
 }
 
-.Y2K-theme .unm-tree {
+.Y2K-theme .unm-view {
     border-color: var(--Y2K-border-color);
     background-color: var(--Y2K-background-color);
     color: var(--Y2K-text-color);
-}
-
-.header-icons {
-    display: flex;
-    align-items: center;
-    position: fixed;
-    top: 30px;
-    left: 30px;
-    gap: 20px;
-}
-
-.icon {
-    width: 24px;
-    height: 24px;
-    cursor: pointer;
 }

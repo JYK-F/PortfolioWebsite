@@ -9,18 +9,9 @@ function setupUNMContent() {
             document.getElementById('unm').innerHTML = data;
             console.log('UNM HTML loaded and added to the document');
             addUNMEventListeners();
-            setupThemeSwitcher(); // Move setupThemeSwitcher inside the then block
+            setupThemeSwitcher(); // Call setupThemeSwitcher after loading the content
         })
         .catch(error => console.error('Error loading unm.html:', error));
-}
-
-function addUNMEventListeners() {
-    document.querySelector('.unm-icon').addEventListener('click', toggleUNMTree);
-}
-
-function toggleUNMTree() {
-    const unmTree = document.querySelector('.unm-tree');
-    unmTree.style.display = unmTree.style.display === 'block' ? 'none' : 'block';
 }
 
 function setupThemeSwitcher() {
@@ -54,23 +45,29 @@ function setupThemeSwitcher() {
     }
 
     function switchTheme() {
-        console.log('Switch theme button clicked');
+        console.log('Switch theme button clicked'); // have to change this to when theme is active
         if (isY2KTheme) {
             updateTheme(currentTheme);
             console.log(`Switched back to ${currentTheme} theme`);
-            themeElements.switchButton.src = '/Assets/Images/heart-empty.svg';
+            themeElements.switchButton.src = '/UNM/Icons/heart-empty.svg';
             themeElements.batteryIcon.style.display = 'none';
         } else {
             updateTheme('Y2K');
             console.log('Switched to Y2K theme');
-            themeElements.switchButton.src = '/Assets/Images/heart-empty.svg';
+            themeElements.switchButton.src = '/UNM/Icons/heart-filled.svg';
             themeElements.batteryIcon.style.display = 'block';
         }
         isY2KTheme = !isY2KTheme;
     }
 
     function updateTheme(theme) {
-        document.getElementById('theme-stylesheet').href = `/Themes/${theme}.css`;
+        const themeStylesheet = document.getElementById('theme-stylesheet');
+        if (themeStylesheet) {
+            // Adjust the path to the correct relative location
+            themeStylesheet.href = `/Themes/${theme}.css`;
+        } else {
+            console.error('Element with ID "theme-stylesheet" not found.');
+        }
         document.documentElement.className = `${theme}-theme`; // Add class to document element
         console.log(`Theme switched to ${theme}`);
         localStorage.setItem('theme', theme); // Store the selected theme

@@ -7,8 +7,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
             // Add event listener for the unm-icon click event
             document.querySelector('.unm-icon').addEventListener('click', () => {
-                const unmTree = document.querySelector('.unm-tree');
-                unmTree.style.display = unmTree.style.display === 'block' ? 'none' : 'block';
+                const unmView = document.querySelector('.unm-view');
+                unmView.style.display = unmView.style.display === 'block' ? 'none' : 'block';
             });
 
             // Add event listeners for language buttons
@@ -21,6 +21,15 @@ document.addEventListener("DOMContentLoaded", function() {
         })
         .catch(error => console.error('Error loading unm.html:', error));
 });
+
+function addUNMEventListeners() {
+    document.querySelector('.unm-icon').addEventListener('click', toggleUNMView);
+}
+
+function toggleUNMView() {
+    const unmView = document.querySelector('.unm-view');
+    unmView.style.display = unmView.style.display === 'block' ? 'none' : 'block';
+}
 
 // Translation function: Manage language translation
 function setLanguage(language) {

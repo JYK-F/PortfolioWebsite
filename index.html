@@ -4,15 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Website!!</title>
-    <base href="/PortfolioWebsite/">
-    <link rel="stylesheet" href="General/default.css">
-    <link id="theme-stylesheet" rel="stylesheet" href="/PortfolioWebsite/Themes/dark.css">
+    <link rel="stylesheet" href="/General/default.css">
+    <link id="theme-stylesheet" rel="stylesheet" href="/Themes/dark.css">
     <script>
         (function() {
             const theme = localStorage.getItem('theme') || 'dark';
             document.documentElement.className = `${theme}-theme`;
             const themeStylesheet = document.getElementById('theme-stylesheet');
-            themeStylesheet.href = `/PortfolioWebsite/Themes/${theme}.css`;
+            themeStylesheet.href = `/Themes/${theme}.css`;
         })();
     </script>
 </head>
@@ -30,8 +29,8 @@
             <p>Welcome to the Home tab!</p>
             <ul>
                 <li><a href="/PortfolioWebsite/">Home</a></li>
-                <li><a href="/PortfolioWebsite/Projects/projecten.html">Projects</a></li>
-                <li><a href="/PortfolioWebsite/Projects/Project0/storygame.html">StoryGame</a></li>
+                <li><a href="/PortfolioWebsite/Projects/">Projects</a></li>
+                <li><a href="/PortfolioWebsite/Projects/Project0/">StoryGame</a></li>
             </ul>
         </div>
         <div id="extra" class="tab-content">
@@ -47,6 +46,6 @@
 
     <script src="../unm.js"></script>
     <script src="/Themes/themes.js"></script>
-    <script src="General/script.js"></script>
+    <script src="/General/script.js"></script>
 </body>
 </html>

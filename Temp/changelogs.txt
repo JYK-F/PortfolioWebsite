@@ -1,16 +1,18 @@
 Things 2 check
 
 why the theme variables are named wierd fix this as soon as possable <<what>> ???
-theme buttons are not coresponding corectly to clicks with the battery
+theme buttons are not coresponding corectly to clicks with the battery (check if i can make a sys that check wich theme is active instead of listing to clicks)
 
 
 Future plans
-change the theme buttons to be icons and stick to the top right of unm
-fix StoryGame page
-
+make better svg files
+mak actual page for first project als refrencing the maiing of page and link to hopefully released version of it
 
 I changed
-added base to define the start folder /<base href="/PortfolioWebsite/">/
-fixed the projects page to switch theme
-all the themes are now corctly stated in the css and colors.css file
-ive chnaged the name form custom theme to be Y2K updated this across evrything
+Did some file structure reordering still working on it lol we do as we go along i guess
+chnaged some unm stuff around eg name of the tab was tree is now view and did some testing
+Project0 truned into SoulRose same goes for html and css
+am tring some file remaping for github pages
+changed the filled heart svg
+the unm them stuff is now in a grid with a close button for unm(unm close does not work yet)
+fixed StoryGame page (i hate myself)

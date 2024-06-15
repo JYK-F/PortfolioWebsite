@@ -4,27 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projecten</title>
-    <base href="/PortfolioWebsite/">
-    <link rel="stylesheet" href="General/default.css">
-    <link rel="stylesheet" href="storygame.css">
+    <link rel="stylesheet" href="/General/default.css">
+    <link rel="stylesheet" href="mo-soulrose.css">
     <link rel="stylesheet" href="/UNM/unm.css">
+    <link id="theme-stylesheet" rel="stylesheet" href="/Themes/dark.css">
     <script>
-        // Inline script to apply the theme as early as possible
         (function() {
             const theme = localStorage.getItem('theme') || 'dark';
             document.documentElement.className = `${theme}-theme`;
             const themeStylesheet = document.getElementById('theme-stylesheet');
-            themeStylesheet.href = `Themes/${theme}.css`;
+            themeStylesheet.href = `/Themes/${theme}.css`;
         })();
     </script>
+
 </head>
 <body>
     <div id="unm"></div>
     <div class="main-content">
         <div class="background-video">
             <video autoplay muted loop id="projectVideo">
-                <source src="/Assets/Videos/cachedVideo.mp4" type="video/mp4">
-                Your browser does not support the video
+                <source src="/Assets/Videos/placeholder.mp4" type="video/mp4">
+                Video not available *o*
             </video>
             <div class="gradient-overlay"></div>
         </div>
@@ -33,32 +33,32 @@
         </div>
             <div class="icon-grid">
                 <div class="icon-box">
-                    <img src="/Assets/Images/Icon1.png" alt="Icon 1">
+                    <img src="/Assets/Images/placeholderMio.jpg" alt="Icon 1">
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                 </div>
                 <div class="icon-box">
-                    <img src="/Assets/Images/icon2.png" alt="Icon 2">
+                    <img src="/Assets/Images/placeholderAsuna.jpg" alt="Icon 2">
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                 </div>
                 <div class="icon-box">
-                    <img src="/Assets/Images/icon3.png" alt="Icon 3">
+                    <img src="/Assets/Images/placeholderMugi.jpg" alt="Icon 3">
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                 </div>
                 <div class="icon-box">
-                    <img src="/Assets/Images/icon4.png" alt="Icon 4">
+                    <img src="/Assets/Images/placeholderRitsu.jpg" alt="Icon 4">
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                 </div>
                 <div class="icon-box">
-                    <img src="/Assets/Images/icon5.png" alt="Icon 5">
+                    <img src="/Assets/Images/placeholderYui.jpg" alt="Icon 5">
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                 </div>
                 <div class="icon-box">
-                    <img src="/Assets/Images/icon6.png" alt="Icon 6">
+                    <img src="/Assets/Images/placeholderYui.gif" alt="Icon 6">
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                 </div>
             </div>
         </div>
-
+<!--
         <div class="additional-content">
             <h1>Journey through designing [Project name]</h1>
             <p>
@@ -87,7 +87,7 @@
             </p>
         </div>
     </div>
-
+-->
     <script src="/unm.js"></script>
     <script src="/Themes/themes.js"></script>
 </body>
